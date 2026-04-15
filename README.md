@@ -1,9 +1,20 @@
-# AWS EC2 SSH Disaster Recovery using EBS Volume Rescue
+AWS Infrastructure Recovery: Manual EBS Volume Surgery & SSH Restoration
+📌 Executive Summary
 
-## 📌 Overview
-Real-world incident where SSH access was lost due to misconfiguration. Recovery was done using EBS volume rescue method without data loss.
+A critical misconfiguration in the sshd_config file resulted in a complete lockout from a production-level EC2 instance.
+This project documents a Disaster Recovery (DR) operation performed to restore access without data loss or instance replacement, using the EBS Volume Rescue Method.
 
----
+🛠 The Scenario (The Challenge)
+Incident: SSH port changed to a non-standard port (2222) without updating Security Groups
+Barrier: AWS Systems Manager (SSM) was not configured, eliminating fallback access
+Impact: Total loss of remote access (SSH + SSM failure)
+Objective: Restore access while preserving system state and data integrity
+🏗 Logical Workflow (The Architecture)
+Isolation: Stop the affected instance to prevent data corruption
+Extraction: Detach the root EBS volume
+Recovery Environment: Attach volume to a temporary rescue instance
+Configuration Repair: Mount filesystem and fix SSH config
+Restoration: Reattach volume and restore normal operation
 
 ## 🚨 Incident
 - SSH port changed to 2222
