@@ -53,32 +53,40 @@ sudo umount /mnt/recovery
 ## 📸 Evidence
 
 ### SSM Connection Failure
+## 🛠 Recovery Steps
 
-![SSM Failed](screenshots/ssm-connection-failed.png)
-
----
-
-### EBS Volume Detached
-
-![Volume Detached](screenshots/ebs-volume-detached-from-instance.png)
+### 1. EBS Volume Detached
+![Volume Detached](screenshots/ebs-volume-detached-from-instance.png.jpeg)
 
 ---
 
-### Volume Attached to Recovery Instance
-
-![Volume Attached](screenshots/ebs-volume-attached-to-rescue-instance.png)
+### 2. Select Instance for Attachment
+![Select Instance](screenshots/select-instance-for-volume-attachment.png.jpeg)
 
 ---
 
-### Fixing SSH Configuration
+### 3. Choose Device Name
+![Choose Device](screenshots/choose-device-name-for-ebs-volume.png.jpeg)
 
+---
+
+### 4. Volume Attached to Recovery Instance
+![Volume Attached](screenshots/ebs-volume-attached-to-rescue-instance.png.jpeg)
+
+---
+
+### 5. Fixing SSH Configuration
 ![Fix SSH](screenshots/fix-sshd-config-on-mounted-volume.png)
 
 ---
 
-### Commands Execution
+### 6. Commands Execution
+![Commands](screenshots/ebs-recovery-commands-terminal.png.png)
 
-![Commands](screenshots/ebs-recovery-commands-terminal.png)
+---
+
+### 7. SSM Failure (Root Problem Evidence)
+![SSM Failed](screenshots/ssm-connection-failed.png)
 
 ---
 
