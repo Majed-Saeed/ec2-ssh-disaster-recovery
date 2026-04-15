@@ -1,4 +1,5 @@
 AWS Infrastructure Recovery: Manual EBS Volume Surgery & SSH Restoration
+
 📌 Executive Summary
 
 A critical misconfiguration in the sshd_config file resulted in a complete lockout from a production-level EC2 instance.
