@@ -111,6 +111,10 @@ the original instance as its root device (`/dev/xvda`), and powered it on.
 SSH came back on port 22 with everything exactly where I left it.
 
 -----
+## Diagram 
+
+
+
 
 ## What this involved
 
